@@ -1,13 +1,13 @@
 # *****************************************************	#
-#														#
-#                                   					#
-#    Makefile											#
-#														#
-#    By: Exyos <augeardw@gmail.com>						#
-#														#
-#    Created: 2019/05/15 18:24:02 by Exyos				#
-#    Updated: 2019/05/15 18:40:23 by Exyos				#
-#														#
+#                                                       #
+#                                                       #
+#    Makefile                                           #
+#                                                       #
+#    By: Exyos <augeardw@gmail.com>                     #
+#                                                       #
+#    Created: 2019/05/15 18:24:02 by Exyos              #
+#    Updated: 2019/05/15 18:40:23 by Exyos              #
+#                                                       #
 # ***************************************************** #
 
 CC = gcc
