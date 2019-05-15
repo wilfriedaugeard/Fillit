@@ -6,7 +6,7 @@
 #    By: Exyos <augeardw@gmail.com>                    				           #
 #                                                 					           #
 #    Created: 2019/05/15 18:24:02 by Exyos            				           #
-#    Updated: 2019/05/15 18:24:02 by Exyos           					       #
+#    Updated: 2019/05/15 18:37:03 by Exyos           					       #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	@echo "\033[31mLib \033[1;31m$(NAME)\033[1;0m\033[31m removed.\033[0m"
+	@echo "\033[31mExecutable \033[1;31m$(NAME)\033[1;0m\033[31m removed.\033[0m"
 
 re: fclean all 
 
