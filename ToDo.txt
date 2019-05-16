@@ -1,0 +1,44 @@
+# *****************************************************	#
+#                                                       #
+#    TODO                                               #
+#                                                       #
+#    Created: 2019/05/16 18:13:54 by Exyos              #
+#    Updated: 2019/05/16 18:13:54 by Exyos              #
+#                                                       #
+# ***************************************************** #
+
+    
+
+FONCTION LOAD_FILE:
+    - lit l'input passé en argument
+    - vérifie que la grille soit bien 4x4 avec des . ou #
+    - appelle create_grid 
+    - vérifie que chaque grile soit séparée par un espace
+
+FONCTION CREATE_GRID:
+    - parcourt 4x4 case et met les valeurs dans la strcture grille
+
+FONCTION CREATE_LABEL:
+    - parcourt les x,y et compte le nombre de #
+    - met ces nombres dans un tableau
+    - param: grid
+
+FONCTION SCAN_LABEL_X:
+    - parcourt les labels x, sauvegarde dans un tableau les labels > 0
+    - s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
+                en fin de parcourt
+    - param: grid
+
+FONCTION SCAN_LABEL_Y:
+    - parcourt les labels y, sauvegarde dans un tableau les labels > 0
+    - s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
+                en fin de parcourt
+    - param: grid
+            
+FONCTION CHECK_LABEL:
+    - vérifie si les labels trouvés en x et y correspondent à une shape 
+    - ajoute la shape a la liste de shape à utiliser
+    - param: 2 tableaux de labels x et y (valeurs>0)
+
+
+
