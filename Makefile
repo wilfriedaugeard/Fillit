@@ -6,7 +6,7 @@
 #    By: Exyos <augeardw@gmail.com>                     #
 #                                                       #
 #    Created: 2019/05/15 18:24:02 by Exyos              #
-#    Updated: 2019/05/15 18:40:23 by Exyos              #
+#    Updated: 2019/05/16 17:13:37 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
@@ -21,6 +21,7 @@ INC_PATH = ./include/
 SRC_FILES = main.c 
 
 INC_FILES = fillit.h \
+			shape.h \
 
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
