@@ -6,13 +6,13 @@
 #    By: Exyos <augeardw@gmail.com>                     #
 #                                                       #
 #    Created: 2019/05/15 18:24:02 by Exyos              #
-#    Updated: 2019/05/16 17:13:37 by Exyos              #
+#    Updated: 2019/05/16 18:10:28 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-NAME = prog
+NAME = fillit
 
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
