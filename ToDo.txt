@@ -10,7 +10,7 @@
     
 
 FONCTION LOAD_FILE:
-    - lit l'input passé en argument
+    OK- lit l'input passé en argument 
     - vérifie que la grille soit bien 4x4 avec des . ou #
     - appelle create_grid 
     - vérifie que chaque grile soit séparée par un espace
