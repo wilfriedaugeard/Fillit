@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/16 18:10:28 by Exyos             */
+/*    Updated: 2019/05/16 14:15:20 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -14,17 +14,35 @@
 #ifndef SHAPE_H
 #define SHAPE_H 
 
+#define SHAPE_SIZE 4
+
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct s_shape t_shape;
-typedef enum {
-    L_LEFT, L_RIGHT, SQUARE, STICK, BOTTOM, FOUR
+
+/**
+ * @enum e_shape
+ * @brief enumeration of different type of tetriminos shape 
+**/
+typedef enum 
+{
+    L_LEFT, 
+    L_RIGHT, 
+    SQUARE, 
+    STICK, 
+    BOTTOM, 
+    FOUR
 } e_shape;
 
-typedef struct s_shape
+
+
+/**
+ * @struct s_shape
+ * @brief structure of a shape
+**/
+typedef struct 
 {
     e_shape name;
-} t_shape;
+} s_shape;
 
 #endif
