@@ -65,10 +65,12 @@ int load_file(char *filename){
     fd=fopen(filename,"r");
     char* line =read_next_line(fd,&size);
     int j = 1;
+    int i;
 
 	while(line!=NULL){
         if(j%(SHAPE_SIZE+1) != 0){
-            for(int i=0; i<SHAPE_SIZE; i++){
+            i = 0;
+            while(i<SHAPE_SIZE){
                 switch(line[i*2]){
                     case '.':
                         printf(". ");
@@ -80,6 +82,7 @@ int load_file(char *filename){
                         printf("DEFAULT\n");
                         break;
                 }
+                i++;
 		    }
         }
         j++;
