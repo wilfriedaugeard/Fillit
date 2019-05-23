@@ -38,6 +38,7 @@ char* read_next_line(FILE* p_f, long* p_size);
 **/
 long* convert_line(char* line, long* p_size);
 
+void display_array(int* t);
 
 /**
  * @brief load and read the tetriminos description file  

@@ -55,6 +55,21 @@ long* convert_line(char* line, long* p_size){
 }
 
 
+void display_array(int* array){
+    int i = 0;
+    int j = 0;
+    while (j < SHAPE_SIZE){
+        i = 0;
+        while(i < SHAPE_SIZE){
+            printf("%d ",array[i+j*SHAPE_SIZE]);
+            i++;
+        }
+        printf("\n");
+        j++;
+    } 
+}
+
+
 int load_file(char *filename){
     if(!filename) 
         return -1;
@@ -66,6 +81,8 @@ int load_file(char *filename){
     char* line =read_next_line(fd,&size);
     int j = 1;
     int i;
+    int t[SHAPE_SIZE*SHAPE_SIZE];
+    int pos = 0;
 
 	while(line!=NULL){
         if(j%(SHAPE_SIZE+1) != 0){
@@ -74,24 +91,33 @@ int load_file(char *filename){
                 switch(line[i*2]){
                     case '.':
                         printf(". ");
+                        t[pos] = 0;
                         break;
                     case '#':
                         printf("# ");
+                        t[pos] = 1;
                         break;
                     default:
                         printf("DEFAULT\n");
+                        t[pos] = -1;
                         break;
                 }
+                pos++;
                 i++;
 		    }
+        }
+        else{
+            display_array(t);
+            j = 0;
+            pos = 0;
         }
         j++;
         printf("\n");
 		free(line);
 		line=read_next_line(fd,&size);
 	}
-	free(line);
+    display_array(t);
+    free(line);
     pclose(fd);
-
     return 0;
 }
