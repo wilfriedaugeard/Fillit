@@ -11,17 +11,17 @@
 
 FONCTION LOAD_FILE:
     OK- lit l'input passé en argument 
-    - vérifie que la grille soit bien 4x4 avec des . ou #
-    - appelle create_grid 
+    OK- vérifie que la grille soit bien 4x4 avec des . ou #
+    OK- appelle create_grid 
     - vérifie que chaque grile soit séparée par un espace
 
 FONCTION CREATE_GRID:
-    - parcourt 4x4 case et met les valeurs dans la strcture grille
+    OK- parcourt 4x4 case et met les valeurs dans la strcture grille
 
 FONCTION CREATE_LABEL:
-    - parcourt les x,y et compte le nombre de #
-    - met ces nombres dans un tableau
-    - param: grid
+    OK- parcourt les x,y et compte le nombre de #
+    OK- met ces nombres dans un tableau
+    OK- param: grid
 
 FONCTION SCAN_LABEL_X:
     - parcourt les labels x, sauvegarde dans un tableau les labels > 0

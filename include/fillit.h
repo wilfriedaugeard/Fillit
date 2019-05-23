@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/15 18:46:44 by Exyos             */
-/*    Updated: 2019/05/22 14:09:14 by Exyos             */
+/*    Updated: 2019/05/23 18:18:46 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -38,7 +38,43 @@ char* read_next_line(FILE* p_f, long* p_size);
 **/
 long* convert_line(char* line, long* p_size);
 
+
+/**
+ *  tempory function
+**/
 void display_array(int* t);
+
+
+/**
+ * @brief make a copy of an array of integer
+ * @param the array to copy and it size
+ * @return the copied array
+**/
+int* copy_array(int* src, int size);
+
+
+/**
+ * @brief count on the width how many times there is a shape in the grid
+ * @param a grid that contains a shape 
+ * @return void
+**/
+void create_label_width(s_shape_grid* grid);
+
+
+/**
+ * @brief count on the height how many times there is a shape in the grid
+ * @param a grid that contains a shape 
+ * @return void
+**/
+void create_label_height(s_shape_grid* grid);
+
+
+/**
+ * @brief create the grid that represent the shape and its labels
+ * @param a grid that contains a shape 
+ * @return void
+**/
+void create_shape_grid(int* array)
 
 /**
  * @brief load and read the tetriminos description file  

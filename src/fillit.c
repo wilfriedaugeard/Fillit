@@ -1,4 +1,5 @@
 #include "fillit.h"
+#include "shape.h"
 
 
 
@@ -29,7 +30,6 @@ char* read_next_line(FILE* p_f, long* p_size){
     return NULL;
 }
 
-
 long* convert_line(char* line, long* p_size){
     long* arr = malloc((*p_size)*sizeof(long));
     if(!arr){
@@ -54,7 +54,6 @@ long* convert_line(char* line, long* p_size){
     return arr;
 }
 
-
 void display_array(int* array){
     int i = 0;
     int j = 0;
@@ -67,8 +66,75 @@ void display_array(int* array){
         printf("\n");
         j++;
     } 
+    printf("\n");
 }
 
+int* copy_array(int* src, int size){
+    int i = 0;
+    int* t = (int*) malloc(size*sizeof(int));
+    while(i < size){
+        t[i] = src[i];
+        i++;
+    }
+    return t;
+}
+
+void create_label_width(s_shape_grid* grid){
+    grid->label_width = (int*) malloc(SHAPE_SIZE*sizeof(int));
+    int i = 0;
+    int j = 0;
+    int cpt = 0;
+    while(j < SHAPE_SIZE){
+        while(i < SHAPE_SIZE){
+            if(grid->value[i+j*SHAPE_SIZE] == 1){
+                cpt++;
+            }
+            i++;
+        }
+        grid->label_width[j] = cpt;
+        cpt = 0;
+        i = 0;
+        j++;
+    }
+}
+
+void create_label_height(s_shape_grid* grid){
+    grid->label_height = (int*) malloc(SHAPE_SIZE*sizeof(int));
+    int i = 0;
+    int j = 0;
+    int cpt = 0;
+    while(i < SHAPE_SIZE){
+        while(j < SHAPE_SIZE){
+            if(grid->value[i+j*SHAPE_SIZE] == 1){
+                cpt++;
+            }
+            j++;
+        }
+        grid->label_height[i] = cpt;
+        cpt = 0;
+        j = 0;
+        i++;
+    }
+}
+
+void create_shape_grid(int* array){
+    int i = 0;
+    s_shape_grid* grid = (s_shape_grid*)malloc(sizeof(s_shape_grid));
+    grid->value = copy_array(array, SHAPE_SIZE*SHAPE_SIZE);
+    create_label_width(grid);
+    create_label_height(grid);
+    while(i < SHAPE_SIZE){
+        printf("%d ",grid->label_width[i]);
+        i++;
+    }
+    printf("\n\n");
+    i = 0;
+    while(i < SHAPE_SIZE){
+        printf("%d ",grid->label_height[i]);
+        i++;
+    }
+    printf("\n\n");
+}
 
 int load_file(char *filename){
     if(!filename) 
@@ -90,15 +156,12 @@ int load_file(char *filename){
             while(i<SHAPE_SIZE){
                 switch(line[i*2]){
                     case '.':
-                        printf(". ");
                         t[pos] = 0;
                         break;
                     case '#':
-                        printf("# ");
                         t[pos] = 1;
                         break;
                     default:
-                        printf("DEFAULT\n");
                         t[pos] = -1;
                         break;
                 }
@@ -107,16 +170,15 @@ int load_file(char *filename){
 		    }
         }
         else{
-            display_array(t);
+            create_shape_grid(t);
             j = 0;
             pos = 0;
         }
         j++;
-        printf("\n");
 		free(line);
 		line=read_next_line(fd,&size);
 	}
-    display_array(t);
+    create_shape_grid(t);
     free(line);
     pclose(fd);
     return 0;

@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/16 14:15:20 by Exyos             */
+/*    Updated: 2019/05/23 17:21:43 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -44,5 +44,17 @@ typedef struct
 {
     e_shape name;
 } s_shape;
+
+
+/**
+ * @struct s_shape_grid
+ * @brief structure of a shape grid with labels
+**/
+typedef struct
+{
+    int* value;
+    int* label_width;
+    int* label_height;
+} s_shape_grid;
 
 #endif
