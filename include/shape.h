@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/24 19:40:36 by Exyos             */
+/*    Updated: 2019/05/24 20:02:58 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -70,6 +70,13 @@ typedef struct
  * @return true if it's a STICK shape else false
 **/
 bool is_stick(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a SQUARE shape
+ * @param a grid
+ * @return true if it's a SQUARE shape else false
+**/
+bool is_square(s_shape_grid* grid);
 
 /**
  * @brief give the name of the Tetriminos shape given

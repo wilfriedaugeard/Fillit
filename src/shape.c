@@ -23,6 +23,14 @@ bool is_stick(s_shape_grid* grid){
 }
 
 
+bool is_square(s_shape_grid* grid){
+    return grid->label_width[0] == 2 &&
+            grid->label_width[1] == 2 &&
+            grid->label_height[0] == 2 &&
+            grid->label_height[1] == 2;
+}
+
+
 e_shape shape_name(s_shape_grid* grid){
     int nb_label_w = grid->label_w_size;
     int nb_label_h = grid->label_h_size;
@@ -30,6 +38,10 @@ e_shape shape_name(s_shape_grid* grid){
     if(nb_label_w == 1 || nb_label_h == 1){
             if(is_stick(grid)) return STICK;
     }
+    if(nb_label_w == 2 || nb_label_h == 2){
+            if(is_square(grid)) return SQUARE;
+    }
+
     return UNDIFINED;
 }
 
