@@ -19,10 +19,16 @@ OBJ_PATH = ./obj/
 INC_PATH = ./include/
 
 SRC_FILES = main.c \
-			fillit.c
+			fillit.c \
+			read.c \
+			array.c \
+			label.c
 
 INC_FILES = fillit.h \
 			shape.h \
+			read.h \
+			array.h \
+			label.h \
 
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
