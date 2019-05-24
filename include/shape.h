@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/23 17:21:43 by Exyos             */
+/*    Updated: 2019/05/24 16:14:56 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -53,6 +53,8 @@ typedef struct
 typedef struct
 {
     int* value;
+    int label_w_size;
+    int label_h_size;
     int* label_width;
     int* label_height;
 } s_shape_grid;

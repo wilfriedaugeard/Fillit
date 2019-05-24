@@ -57,6 +57,7 @@ long* convert_line(char* line, long* p_size){
 void display_array(int* array){
     int i = 0;
     int j = 0;
+    printf("ARRAY :\n\n");
     while (j < SHAPE_SIZE){
         i = 0;
         while(i < SHAPE_SIZE){
@@ -80,7 +81,8 @@ int* copy_array(int* src, int size){
 }
 
 void create_label_width(s_shape_grid* grid){
-    grid->label_width = (int*) malloc(SHAPE_SIZE*sizeof(int));
+    grid->label_w_size = SHAPE_SIZE;
+    grid->label_width = (int*) malloc(grid->label_w_size*sizeof(int));
     int i = 0;
     int j = 0;
     int cpt = 0;
@@ -99,7 +101,8 @@ void create_label_width(s_shape_grid* grid){
 }
 
 void create_label_height(s_shape_grid* grid){
-    grid->label_height = (int*) malloc(SHAPE_SIZE*sizeof(int));
+    grid->label_h_size = SHAPE_SIZE;
+    grid->label_height = (int*) malloc(grid->label_h_size*sizeof(int));
     int i = 0;
     int j = 0;
     int cpt = 0;
@@ -117,27 +120,82 @@ void create_label_height(s_shape_grid* grid){
     }
 }
 
+int nb_label(int* label_array){
+    int i = 0;
+    int cpt = 0;
+    bool label = false;
+
+     while(i < SHAPE_SIZE){
+        if( label_array[i] != 0){
+            label = true;
+            cpt++;
+        }
+        else{
+            if(label) break;
+            label = false;
+        }
+        i++;
+    }
+    return cpt;
+}
+
+int* reduice_label(int* label_array,int* label_size){
+    int i = 0;
+    int pos = 0;
+    *label_size = nb_label(label_array);
+    bool label = false;
+    int* tmp = (int*)malloc(*label_size*sizeof(int));
+
+     while(i < SHAPE_SIZE){
+        if(label_array[i] != 0){
+            label = true;
+            tmp[pos] = label_array[i];
+            pos++;
+        }
+        else{
+            if(label) break;
+            label = false;
+        }
+        i++;
+    }
+    return tmp;
+}
+
+void scan_label(s_shape_grid* grid){
+    int* array_w = reduice_label(grid->label_width, &grid->label_w_size);
+    int* array_h = reduice_label(grid->label_height, &grid->label_h_size);
+    free(grid->label_width);
+    free(grid->label_height);
+    grid->label_width = array_w;
+    grid->label_height = array_h;
+}
+
 void create_label(s_shape_grid* grid){
     create_label_width(grid);
     create_label_height(grid);
-}
-
-void create_shape_grid(int* array){
+    scan_label(grid);
     int i = 0;
-    s_shape_grid* grid = (s_shape_grid*)malloc(sizeof(s_shape_grid));
-    grid->value = copy_array(array, SHAPE_SIZE*SHAPE_SIZE);
-    create_label(grid);
-    while(i < SHAPE_SIZE){
+
+    printf("LABEL X: ");
+    while (i < grid->label_w_size){
         printf("%d ",grid->label_width[i]);
         i++;
     }
-    printf("\n\n");
+    printf("\n");
     i = 0;
-    while(i < SHAPE_SIZE){
+    printf("LABEL Y: ");
+    while (i < grid->label_h_size){
         printf("%d ",grid->label_height[i]);
         i++;
     }
     printf("\n\n");
+
+} 
+
+void create_shape_grid(int* array){
+    s_shape_grid* grid = (s_shape_grid*)malloc(sizeof(s_shape_grid));
+    grid->value = copy_array(array, SHAPE_SIZE*SHAPE_SIZE);
+    create_label(grid);
 }
 
 int load_file(char *filename){
@@ -174,6 +232,7 @@ int load_file(char *filename){
 		    }
         }
         else{
+            display_array(t);
             create_shape_grid(t);
             j = 0;
             pos = 0;
@@ -182,6 +241,7 @@ int load_file(char *filename){
 		free(line);
 		line=read_next_line(fd,&size);
 	}
+    display_array(t);
     create_shape_grid(t);
     free(line);
     pclose(fd);
