@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/15 18:46:44 by Exyos             */
-/*    Updated: 2019/05/24 16:42:41 by Exyos             */
+/*    Updated: 2019/05/24 19:10:49 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -23,10 +23,10 @@
 
 /**
  * @brief create the grid that represent the shape and its labels
- * @param a grid that contains a shape 
+ * @param the game and a grid that contains a shape 
  * @return void
 **/
-void create_shape_grid(int* array);
+void create_shape_grid(s_game* game, int* array);
 
 /**
  * @brief load and read the tetriminos description file  
@@ -34,5 +34,8 @@ void create_shape_grid(int* array);
  * @return 0 or -1
 **/
 int load_file(char *filename);
+
+
+
 
 #endif

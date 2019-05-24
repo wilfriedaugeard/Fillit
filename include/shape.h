@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/24 16:14:56 by Exyos             */
+/*    Updated: 2019/05/24 19:40:36 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -18,6 +18,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+
+#include <stdbool.h>
 
 
 /**
@@ -31,19 +33,10 @@ typedef enum
     SQUARE, 
     STICK, 
     BOTTOM, 
-    FOUR
+    FOUR,
+    FOUR_REV,
+    UNDIFINED
 } e_shape;
-
-
-
-/**
- * @struct s_shape
- * @brief structure of a shape
-**/
-typedef struct 
-{
-    e_shape name;
-} s_shape;
 
 
 /**
@@ -58,5 +51,40 @@ typedef struct
     int* label_width;
     int* label_height;
 } s_shape_grid;
+
+
+/**
+ * @struct s_game
+ * @brief structure of the game
+**/
+typedef struct 
+{
+    int size;
+    e_shape* shapes;
+} s_game;
+
+
+/**
+ * @brief verify if the shape is a STICK shape
+ * @param a grid
+ * @return true if it's a STICK shape else false
+**/
+bool is_stick(s_shape_grid* grid);
+
+/**
+ * @brief give the name of the Tetriminos shape given
+ * @param a shape_grid
+ * @return the name of the shape
+**/
+e_shape shape_name(s_shape_grid* grid);
+
+
+/**
+ * @brief display the name of the shapes
+ * @param the game
+ * @return void
+ **/
+void display_name(s_game* game);
+
 
 #endif

@@ -85,8 +85,6 @@ int* reduice_label(int* label_array,int* label_size){
 void scan_label(s_shape_grid* grid){
     int* array_w = reduice_label(grid->label_width, &grid->label_w_size);
     int* array_h = reduice_label(grid->label_height, &grid->label_h_size);
-    free(grid->label_width);
-    free(grid->label_height);
     grid->label_width = array_w;
     grid->label_height = array_h;
 }
