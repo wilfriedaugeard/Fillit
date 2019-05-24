@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/15 18:46:44 by Exyos             */
-/*    Updated: 2019/05/23 18:18:46 by Exyos             */
+/*    Updated: 2019/05/24 14:45:56 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -68,13 +68,19 @@ void create_label_width(s_shape_grid* grid);
 **/
 void create_label_height(s_shape_grid* grid);
 
+/**
+ * @brief count how many times there is a shape in the grid (width and height)
+ * @param a grid that contains a shape 
+ * @return void
+**/
+void create_label(s_shape_grid* grid);
 
 /**
  * @brief create the grid that represent the shape and its labels
  * @param a grid that contains a shape 
  * @return void
 **/
-void create_shape_grid(int* array)
+void create_shape_grid(int* array);
 
 /**
  * @brief load and read the tetriminos description file  

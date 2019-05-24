@@ -117,12 +117,16 @@ void create_label_height(s_shape_grid* grid){
     }
 }
 
+void create_label(s_shape_grid* grid){
+    create_label_width(grid);
+    create_label_height(grid);
+}
+
 void create_shape_grid(int* array){
     int i = 0;
     s_shape_grid* grid = (s_shape_grid*)malloc(sizeof(s_shape_grid));
     grid->value = copy_array(array, SHAPE_SIZE*SHAPE_SIZE);
-    create_label_width(grid);
-    create_label_height(grid);
+    create_label(grid);
     while(i < SHAPE_SIZE){
         printf("%d ",grid->label_width[i]);
         i++;
