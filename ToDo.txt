@@ -24,16 +24,16 @@ FONCTION CREATE_LABEL:
     OK- param: grid
 
 FONCTION SCAN_LABEL_X:
-    - parcourt les labels x, sauvegarde dans un tableau les labels > 0
-    - s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
+    OK- parcourt les labels x, sauvegarde dans un tableau les labels > 0
+    OK- s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
                 en fin de parcourt
-    - param: grid
+    OK- param: grid
 
 FONCTION SCAN_LABEL_Y:
-    - parcourt les labels y, sauvegarde dans un tableau les labels > 0
-    - s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
+    OK- parcourt les labels y, sauvegarde dans un tableau les labels > 0
+    OK- s'arrète: à la vue d'un 0 si on a dejà vu un label > 0,
                 en fin de parcourt
-    - param: grid
+    OK- param: grid
             
 FONCTION CHECK_LABEL:
     - vérifie si les labels trouvés en x et y correspondent à une shape 
