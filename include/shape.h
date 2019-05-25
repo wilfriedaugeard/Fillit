@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/25 12:59:09 by Exyos             */
+/*    Updated: 2019/05/25 13:05:11 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -91,6 +91,13 @@ bool is_l_left(s_shape_grid* grid);
  * @return true if it's a L_RIGHT shape else false
 **/
 bool is_l_right(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a BOTTOM shape
+ * @param a grid
+ * @return true if it's a BOTTOM shape else false
+**/
+bool is_bottom(s_shape_grid* grid);
 
 /**
  * @brief give the name of the Tetriminos shape given
