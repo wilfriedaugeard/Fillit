@@ -208,7 +208,31 @@ e_shape shape_name(s_shape_grid* grid){
 void display_name(s_game* game){
     int i = 0;
     while(i < game->size){
-        printf("%d\n",game->shapes[i]);
+        switch(game->shapes[i]){
+            case L_LEFT:
+                printf("L_LEFT\n");
+                break;
+            case L_RIGHT:
+                printf("L_RIGHT\n");
+                break;
+            case SQUARE:
+                printf("SQUARE\n");
+                break;
+            case STICK:
+                printf("STICK\n");
+                break;
+            case BOTTOM:
+                printf("BOTTOM\n");
+                break;
+            case FOUR:
+                printf("FOUR\n");
+                break;
+            case FOUR_REV:
+                printf("FOUR_REV\n");
+                break;
+            default:
+                printf("UNDIFINED\n");
+        }
         i++;
     }
 }
