@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/24 20:02:58 by Exyos             */
+/*    Updated: 2019/05/25 12:52:16 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -77,6 +77,13 @@ bool is_stick(s_shape_grid* grid);
  * @return true if it's a SQUARE shape else false
 **/
 bool is_square(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a L_LEFT shape
+ * @param a grid
+ * @return true if it's a L_LEFT shape else false
+**/
+bool is_l_left(s_shape_grid* grid);
 
 /**
  * @brief give the name of the Tetriminos shape given
