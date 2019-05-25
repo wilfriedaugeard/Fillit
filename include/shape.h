@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/25 13:05:11 by Exyos             */
+/*    Updated: 2019/05/25 13:52:47 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -99,13 +99,27 @@ bool is_l_right(s_shape_grid* grid);
 **/
 bool is_bottom(s_shape_grid* grid);
 
+
+/**
+ * @brief verify if the shape is a FOUR shape
+ * @param a grid
+ * @return true if it's a FOUR shape else false
+**/
+bool is_four(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a FOUR or FOUR_REV shape
+ * @param a grid
+ * @return the type of the shape (FOUR,FOUR_REV or UNDIFINED)
+**/
+e_shape four_or_four_rev(s_shape_grid* grid);
+
 /**
  * @brief give the name of the Tetriminos shape given
  * @param a shape_grid
  * @return the name of the shape
 **/
 e_shape shape_name(s_shape_grid* grid);
-
 
 /**
  * @brief display the name of the shapes
