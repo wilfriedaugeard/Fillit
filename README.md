@@ -30,6 +30,16 @@ L_LEFT_1    |   L_LEFT_2    |   L_LEFT_3    |   L_LEFT_4
   .##.      |     ##..      |     .#..      |     .###
   ..#.      |     #...      |     ....      |     ....
 ```
+
+#### FOUR, FOUR_REV
+```
+ FOUR_H     |    FOUR_V     |  FOUR_REV_H   |   FOUR_REV_V
+  ....      |     ....      |     ....      |     ....
+  ..##      |     #...      |     ##..      |     ..#.
+  .##.      |     ##..      |     .##.      |     .##.
+  ....      |     .#..      |     ....      |     .#..
+```
+
 #### SQUARE, STICK, UNDEFINED
 ```
  SQUARE     |   STICK_H     |   STICK_V     |   UNDEFINED
