@@ -14,24 +14,7 @@ FONCTION LOAD_FILE:
     OK- vérifie que la grille soit bien 4x4 avec des . ou #
     OK- appelle create_grid 
     - vérifie que chaque grile soit séparée par un espace
-
-FONCTIONS VERIFIER_FORME:
-    - pour chaque forme écrire une fonction qui, à partir des labels dit ou on si c'est la forme correspondante
-    - param: grid
-
-    - l_left
-    - l_right
-    - bottom
-    - four
-    - four_rev
-    OK- square
-    OK- stick
-
-            
-FONCTION CHECK_LABEL:
-    - vérifie si les labels trouvés en x et y correspondent à une shape 
-    - ajoute la shape a la liste de shape à utiliser
-    - param: 2 tableaux de labels x et y (valeurs>0)
+        
 
 
-
+Clean memory leak
