@@ -31,7 +31,7 @@ int load_file(char *filename){
         if(j%(SHAPE_SIZE+1) != 0){
             i = 0;
             while(i<SHAPE_SIZE){
-                switch(line[i*2]){
+                switch(line[i]){
                     case '.':
                         t[pos] = 0;
                         break;
