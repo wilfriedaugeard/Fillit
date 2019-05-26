@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/16 17:12:55 by Exyos             */
-/*    Updated: 2019/05/25 13:52:47 by Exyos             */
+/*    Updated: 2019/05/26 23:28:21 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -28,13 +28,25 @@
 **/
 typedef enum 
 {
-    L_LEFT, 
-    L_RIGHT, 
+    L_LEFT_1, 
+    L_LEFT_2,
+    L_LEFT_3,
+    L_LEFT_4,
+    L_RIGHT_1, 
+    L_RIGHT_2,
+    L_RIGHT_3,
+    L_RIGHT_4,
     SQUARE, 
-    STICK, 
-    BOTTOM, 
-    FOUR,
-    FOUR_REV,
+    STICK_H,
+    STICK_V, 
+    BOTTOM_1,
+    BOTTOM_2,
+    BOTTOM_3,
+    BOTTOM_4,
+    FOUR_H,
+    FOUR_V,
+    FOUR_REV_H,
+    FOUR_REV_V,
     UNDIFINED
 } e_shape;
 
@@ -65,11 +77,18 @@ typedef struct
 
 
 /**
- * @brief verify if the shape is a STICK shape
+ * @brief verify if the shape is a STICK_H shape
  * @param a grid
- * @return true if it's a STICK shape else false
+ * @return true if it's a STICK_H shape else false
 **/
-bool is_stick(s_shape_grid* grid);
+bool is_stick_h(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a STICK_V shape
+ * @param a grid
+ * @return true if it's a STICK_V shape else false
+**/
+bool is_stick_v(s_shape_grid* grid);
 
 /**
  * @brief verify if the shape is a SQUARE shape
@@ -79,26 +98,88 @@ bool is_stick(s_shape_grid* grid);
 bool is_square(s_shape_grid* grid);
 
 /**
- * @brief verify if the shape is a L_LEFT shape
+ * @brief verify if the shape is a L_LEFT_1 shape
  * @param a grid
- * @return true if it's a L_LEFT shape else false
+ * @return true if it's a L_LEFT_1 shape else false
 **/
-bool is_l_left(s_shape_grid* grid);
+bool is_l_left_1(s_shape_grid* grid);
 
 /**
- * @brief verify if the shape is a L_RIGHT shape
+ * @brief verify if the shape is a L_LEFT_2 shape
  * @param a grid
- * @return true if it's a L_RIGHT shape else false
+ * @return true if it's a L_LEFT_2 shape else false
 **/
-bool is_l_right(s_shape_grid* grid);
+bool is_l_left_2(s_shape_grid* grid);
 
 /**
- * @brief verify if the shape is a BOTTOM shape
+ * @brief verify if the shape is a L_LEFT_3 shape
  * @param a grid
- * @return true if it's a BOTTOM shape else false
+ * @return true if it's a L_LEFT_3 shape else false
 **/
-bool is_bottom(s_shape_grid* grid);
+bool is_l_left_3(s_shape_grid* grid);
 
+/**
+ * @brief verify if the shape is a L_LEFT_4 shape
+ * @param a grid
+ * @return true if it's a L_LEFT_4 shape else false
+**/
+bool is_l_left_4(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a L_RIGHT_1 shape
+ * @param a grid
+ * @return true if it's a L_RIGHT_1 shape else false
+**/
+bool is_l_right_1(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a L_RIGHT_2 shape
+ * @param a grid
+ * @return true if it's a L_RIGHT_2 shape else false
+**/
+bool is_l_right_2(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a L_RIGHT_3 shape
+ * @param a grid
+ * @return true if it's a L_RIGHT_3 shape else false
+**/
+bool is_l_right_3(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a L_RIGHT_4 shape
+ * @param a grid
+ * @return true if it's a L_RIGHT_4 shape else false
+**/
+bool is_l_right_4(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a BOTTOM_1 shape
+ * @param a grid
+ * @return true if it's a BOTTOM_1 shape else false
+**/
+bool is_bottom_1(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a BOTTOM_2 shape
+ * @param a grid
+ * @return true if it's a BOTTOM_2 shape else false
+**/
+bool is_bottom_2(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a BOTTOM_3 shape
+ * @param a grid
+ * @return true if it's a BOTTOM_3 shape else false
+**/
+bool is_bottom_3(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a BOTTOM_4 shape
+ * @param a grid
+ * @return true if it's a BOTTOM_4 shape else false
+**/
+bool is_bottom_4(s_shape_grid* grid);
 
 /**
  * @brief verify if the shape is a FOUR shape
@@ -108,9 +189,23 @@ bool is_bottom(s_shape_grid* grid);
 bool is_four(s_shape_grid* grid);
 
 /**
- * @brief verify if the shape is a FOUR or FOUR_REV shape
+ * @brief verify if the shape is a FOUR_h shape
  * @param a grid
- * @return the type of the shape (FOUR,FOUR_REV or UNDIFINED)
+ * @return true if it's a FOUR_h shape else false
+**/
+bool is_four_h(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a FOUR_V shape
+ * @param a grid
+ * @return true if it's a FOUR_V shape else false
+**/
+bool is_four_v(s_shape_grid* grid);
+
+/**
+ * @brief verify if the shape is a FOUR_H,FOUR_V or FOUR_REV_H,FOUR_REV_V shape
+ * @param a grid
+ * @return the type of the shape (FOUR_H,FOUR_V,FOUR_REV_H,FOUR_REV_V or UNDIFINED)
 **/
 e_shape four_or_four_rev(s_shape_grid* grid);
 
