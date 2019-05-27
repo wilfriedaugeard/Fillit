@@ -79,6 +79,7 @@ int* reduice_label(int* label_array,int* label_size){
         }
         i++;
     }
+    free(label_array);
     return tmp;
 }
 
