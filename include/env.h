@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/06/01 12:38:27 by Exyos             */
-/*    Updated: 2019/06/01 16:47:08 by Exyos             */
+/*    Updated: 2019/06/01 17:36:14 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -85,11 +85,11 @@ typedef struct
 } s_env;
 
 /**
- * @brief compute the max width
+ * @brief compute the max width and height
  * @param a game
- * @return the size computed
+ * @return void
 **/
-int width_size(s_game* game);
+void compute_size_max(s_env* env);
 
 /**
  * @brief initialize the environment
