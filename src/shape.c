@@ -35,7 +35,7 @@ e_shape shape_name(s_shape_grid* grid){
                 return four_or_four_rev(grid);
             }
     }
-    return UNDIFINED;
+    return UNDEFINED;
 }
 
 void display_name(s_game* game){
@@ -100,7 +100,7 @@ void display_name(s_game* game){
                 printf("FOUR_REV_V\n");
                 break;
             default:
-                printf("UNDIFINED\n");
+                printf("UNDEFINED\n");
         }
         i++;
     }

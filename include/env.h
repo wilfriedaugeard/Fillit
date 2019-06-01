@@ -43,7 +43,7 @@ typedef enum
     FOUR_V,
     FOUR_REV_H,
     FOUR_REV_V,
-    UNDIFINED
+    UNDEFINED
 } e_shape;
 
 

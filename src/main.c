@@ -7,7 +7,10 @@ int main(int argc, char *argv[]){
         EXIT_FAILURE;
     }
     s_game* game = create_game();
-    load_file(argv[1],game);
+    if(load_file(argv[1],game) == -1){
+        printf("error\n");
+        return EXIT_SUCCESS;
+    }
     s_env* env = initialize_env(game);
     stick_v_placed(env, 0, 0, 1);
     stick_h_placed(env, 1, 0, 2);

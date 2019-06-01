@@ -14,6 +14,7 @@
 #ifndef FILLIT_H
 #define FILLIT_H 
 
+
 #include "shape.h"
 #include "read.h"
 #include "array.h"
@@ -25,9 +26,9 @@
 /**
  * @brief create the grid that represent the shape and its labels
  * @param the game and a grid that contains a shape 
- * @return void
+ * @return int
 **/
-void create_shape_grid(s_game* game, int* array);
+int create_shape_grid(s_game* game, int* array);
 
 /**
  * @brief load and read the tetriminos description file  

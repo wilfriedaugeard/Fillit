@@ -39,7 +39,7 @@ e_shape four_or_four_rev(s_shape_grid* grid){
             if(is_four(grid)) return FOUR_H;
             return FOUR_REV_H;
         }else{
-            return UNDIFINED;
+            return UNDEFINED;
         }
     }else{
         if(grid->label_width[0] == 1 &&
@@ -50,8 +50,8 @@ e_shape four_or_four_rev(s_shape_grid* grid){
             if(is_four(grid)) return FOUR_V;
             return FOUR_REV_V;
         }else{
-            return UNDIFINED;
+            return UNDEFINED;
         }
     }
-    return UNDIFINED;
+    return UNDEFINED;
 }

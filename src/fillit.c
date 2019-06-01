@@ -18,7 +18,7 @@ void free_game(s_game* game){
 }
 
 
-void create_shape_grid(s_game* game, int* array){
+int create_shape_grid(s_game* game, int* array){
     s_shape_grid* grid = (s_shape_grid*)malloc(sizeof(s_shape_grid));
     grid->value = copy_array(array, SHAPE_SIZE*SHAPE_SIZE);
     create_label(grid);
@@ -27,11 +27,17 @@ void create_shape_grid(s_game* game, int* array){
         game->shapes = (e_shape*)malloc(sizeof(e_shape));
     }else{
         game->shapes = realloc(game->shapes,game->size*sizeof(e_shape));
-        if(!game->shapes) perror("OOKKK\n");
+        if(!game->shapes) 
+            perror("OOKKK\n");
     }
-    if(!game->shapes) printf("LEAK\n");
-    game->shapes[game->size-1] = shape_name(grid);
+    if(!game->shapes) 
+        printf("LEAK\n");
+    e_shape name = shape_name(grid);
+    if(name == UNDEFINED) 
+        return -1;
+    game->shapes[game->size-1] = name;
     free_grid(grid);
+    return 0;
 }
 
 s_game* create_game(void){
@@ -67,15 +73,16 @@ int load_file(char *filename, s_game* game){
                         break;
                     default:
                         t[pos] = -1;
-                        break;
+                        return -1;
                 }
                 pos++;
                 i++;
 		    }
         }
         else{
+            if (create_shape_grid(game,t) == -1) 
+                return -1;
             display_array(t,game->size);
-            create_shape_grid(game,t);
             j = 0;
             pos = 0;
         }
@@ -83,8 +90,9 @@ int load_file(char *filename, s_game* game){
 		free(line);
 		line=read_next_line(fd,&size);
 	}
+    if (create_shape_grid(game,t) == -1)
+        return -1;
     display_array(t,game->size);
-    create_shape_grid(game,t);
     free(line);
     pclose(fd);
     return 0;
