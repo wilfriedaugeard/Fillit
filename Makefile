@@ -6,7 +6,7 @@
 #    By: Exyos <augeardw@gmail.com>                     #
 #                                                       #
 #    Created: 2019/05/15 18:24:02 by Exyos              #
-#    Updated: 2019/06/01 12:17:34 by Exyos              #
+#    Updated: 2019/06/01 19:43:01 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
@@ -31,7 +31,8 @@ SRC_FILES = main.c \
 			shapes/sticky.c \
 			shapes/bottom.c \
 			shapes/square.c \
-			shapes/four.c
+			shapes/four.c \
+			solver.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
