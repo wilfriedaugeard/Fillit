@@ -74,7 +74,7 @@ int load_file(char *filename, s_game* game){
 		    }
         }
         else{
-            display_array(t);
+            display_array(t,game->size);
             create_shape_grid(game,t);
             j = 0;
             pos = 0;
@@ -83,7 +83,7 @@ int load_file(char *filename, s_game* game){
 		free(line);
 		line=read_next_line(fd,&size);
 	}
-    display_array(t);
+    display_array(t,game->size);
     create_shape_grid(game,t);
     display_name(game);
     free(line);

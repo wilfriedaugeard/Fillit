@@ -2,14 +2,20 @@
 
 
 
-void display_array(int* array){
+void display_array(int* array, int number_to_display){
     int i = 0;
     int j = 0;
     printf("ARRAY :\n\n");
     while (j < SHAPE_SIZE){
         i = 0;
         while(i < SHAPE_SIZE){
-            printf("%d ",array[i+j*SHAPE_SIZE]);
+            if(array[i+j*SHAPE_SIZE] == 1)
+                printf("%c",number_to_display+65);
+            else
+            {
+                printf(".");
+            }
+            
             i++;
         }
         printf("\n");

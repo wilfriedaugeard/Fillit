@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/05/24 17:01:26 by Exyos             */
-/*    Updated: 2019/05/24 17:01:26 by Exyos             */
+/*    Updated: 2019/06/01 11:12:55 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -22,7 +22,7 @@
 /**
  *  tempory function
 **/
-void display_array(int* t);
+void display_array(int* array, int number_to_display);
 
 
 /**
