@@ -94,8 +94,7 @@ void create_label(s_shape_grid* grid){
     create_label_width(grid);
     create_label_height(grid);
     scan_label(grid);
-    int i = 0;
-
+    /*int i = 0;
     printf("LABEL X: ");
     while (i < grid->label_w_size){
         printf("%d ",grid->label_width[i]);
@@ -108,6 +107,6 @@ void create_label(s_shape_grid* grid){
         printf("%d ",grid->label_height[i]);
         i++;
     }
-    printf("\n\n");
+    printf("\n\n"); */
 
 } 

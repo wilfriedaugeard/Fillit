@@ -85,7 +85,6 @@ int load_file(char *filename, s_game* game){
 	}
     display_array(t,game->size);
     create_shape_grid(game,t);
-    display_name(game);
     free(line);
     pclose(fd);
     return 0;

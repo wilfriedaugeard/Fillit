@@ -34,4 +34,9 @@ bool is_stick_h(s_shape_grid* grid);
 **/
 bool is_stick_v(s_shape_grid* grid);
 
+bool stick_h_be_placed(s_env* env, int x, int y);
+bool stick_v_be_placed(s_env* env, int x, int y);
+
+void stick_v_placed(s_env* env, int x, int y, int nb);
+void stick_h_placed(s_env* env, int x, int y, int nb);
 #endif

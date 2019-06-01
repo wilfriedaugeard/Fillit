@@ -81,7 +81,7 @@ typedef struct
     s_game* game;
     int width;
     int height;
-    int* env;
+    int** env_grid;
 } s_env;
 
 /**
@@ -97,5 +97,7 @@ void compute_size_max(s_env* env);
  * @return the environment initialized
 **/
 s_env* initialize_env(s_game* game);
+
+void display_env_grid(s_env* env);
 
 #endif
