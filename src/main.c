@@ -8,6 +8,7 @@ int main(int argc, char *argv[]){
     }
     s_game* game = create_game();
     load_file(argv[1],game);
+    initialize_env(game);
     free(game);
     return EXIT_SUCCESS;
 }

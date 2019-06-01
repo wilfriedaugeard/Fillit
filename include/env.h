@@ -6,7 +6,7 @@
 /*    By: Exyos <augeardw@gmail.com>                    */
 /*                                                      */
 /*    Created: 2019/06/01 12:38:27 by Exyos             */
-/*    Updated: 2019/06/01 12:38:27 by Exyos             */
+/*    Updated: 2019/06/01 16:47:08 by Exyos             */
 /*                                                      */
 /* **************************************************** */
 
@@ -14,6 +14,9 @@
 #define ENV_H 
 
 #define SHAPE_SIZE 4
+
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * @enum e_shape
@@ -69,5 +72,30 @@ typedef struct
 } s_game;
 
 
+/**
+ * @struct s_env
+ * @brief structure of the environment
+**/
+typedef struct 
+{
+    s_game* game;
+    int width;
+    int height;
+    int* env;
+} s_env;
+
+/**
+ * @brief compute the max width
+ * @param a game
+ * @return the size computed
+**/
+int width_size(s_game* game);
+
+/**
+ * @brief initialize the environment
+ * @param a game
+ * @return the environment initialized
+**/
+s_env* initialize_env(s_game* game);
 
 #endif
