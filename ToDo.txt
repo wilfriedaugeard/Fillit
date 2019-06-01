@@ -3,7 +3,7 @@
 #    TODO                                               #
 #                                                       #
 #    Created: 2019/05/16 18:13:54 by Exyos              #
-#    Updated: 2019/06/01 11:44:22 by Exyos              #
+#    Updated: 2019/06/01 19:37:01 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
@@ -13,7 +13,7 @@ FONCTION LOAD_FILE:
     OK- lit l'input passé en argument 
     OK- vérifie que la grille soit bien 4x4 avec des . ou #
     OK- appelle create_grid 
-    - vérifie que chaque grile soit séparée par un espace
+    OK- vérifie que chaque grile soit séparée par un espace
         
 
 
