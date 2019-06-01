@@ -6,7 +6,7 @@
 #    By: Exyos <augeardw@gmail.com>                     #
 #                                                       #
 #    Created: 2019/05/15 18:24:02 by Exyos              #
-#    Updated: 2019/05/24 17:39:30 by Exyos              #
+#    Updated: 2019/06/01 12:17:34 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
@@ -16,6 +16,7 @@ NAME = fillit
 
 SRC_PATH = ./src/
 OBJ_PATH = ./obj/
+OBJ_SHAPE_PATH = ./obj/shapes
 INC_PATH = ./include/
 
 SRC_FILES = main.c \
@@ -23,14 +24,14 @@ SRC_FILES = main.c \
 			shape.c \
 			read.c \
 			array.c \
-			label.c 
-
-INC_FILES = fillit.h \
-			shape.h \
-			read.h \
-			array.h \
-			label.h \
-
+			label.c \
+			env.c \
+			shapes/l_left.c \
+			shapes/l_right.c \
+			shapes/sticky.c \
+			shapes/bottom.c \
+			shapes/square.c \
+			shapes/four.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
@@ -41,6 +42,7 @@ all: $(NAME)
 
 $(OBJ_PATH) :
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	@mkdir $(OBJ_SHAPE_PATH) 2> /dev/null || true
 
 $(OBJ_PATH)%.o : $(SRC_PATH)%.c
 	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH)
