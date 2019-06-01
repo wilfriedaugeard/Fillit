@@ -3,7 +3,7 @@
 #    TODO                                               #
 #                                                       #
 #    Created: 2019/05/16 18:13:54 by Exyos              #
-#    Updated: 2019/05/27 00:27:58 by Exyos              #
+#    Updated: 2019/06/01 11:44:22 by Exyos              #
 #                                                       #
 # ***************************************************** #
 
@@ -18,3 +18,30 @@ FONCTION LOAD_FILE:
 
 
 Clean memory leak
+
+
+FONCTION CAN_BE_PLACED:
+    - Spécifique à une shape
+    - Dit si la shape peut etre placé à partir de la coordonée donnée
+    - param: la grille d'environnement, la coordonée de la partie de la shape la plus à gauche puis en haut
+    - return: true ou false
+
+    - L_LEFT_1, 
+    - L_LEFT_2,
+    - L_LEFT_3,
+    - L_LEFT_4,
+    - L_RIGHT_1, 
+    - L_RIGHT_2,
+    - L_RIGHT_3,
+    - L_RIGHT_4,
+    - SQUARE, 
+    - STICK_H,
+    - STICK_V, 
+    - BOTTOM_1,
+    - BOTTOM_2,
+    - BOTTOM_3,
+    - BOTTOM_4,
+    - FOUR_H,
+    - FOUR_V,
+    - FOUR_REV_H,
+    - FOUR_REV_V,
