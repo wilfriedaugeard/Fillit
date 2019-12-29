@@ -11,7 +11,7 @@ See [subject](./subject/fillit.pdf).
 ### Clone
 Clone this repository to your local machine 
 ```shell
-$ git clone https://github.com/wilfriedaugeard/Reversi_AI/
+$ git clone https://github.com/wilfriedaugeard/Fillit/
 ```
 
 
