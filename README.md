@@ -1,7 +1,19 @@
 # Fillit
-
+<p align="center-left">
+  <img alt="Version : 1.0.0" src="https://img.shields.io/badge/version-1.0.0-green"/>
+  <img alt="C" src="https://img.shields.io/badge/language-C-blue" />
+</p><br/>
 Fillit is a project of the 42 school on finding an optimal solution to a problem. Here it will be on the optimal arrangement of Tetriminos pieces.
 See [subject](./subject/fillit.pdf).
+
+
+## Installation
+### Clone
+Clone this repository to your local machine 
+```shell
+$ git clone https://github.com/wilfriedaugeard/Reversi_AI/
+```
+
 
 ## Shapes
 
@@ -50,3 +62,14 @@ L_LEFT_1    |   L_LEFT_2    |   L_LEFT_3    |   L_LEFT_4
 ```
   
   
+ ## Author
+
+👤 **Wilfried Augeard**
+- Github: [@Exyos](https://github.com/wilfriedaugeard)
+- Website: [waugeard.com](https://waugeard.com)
+
+## License
+
+- [MIT license](https://github.com/wilfriedaugeard/Fillit/blob/master/LICENSE)<br/>
+- Copyright © 2019 [Exyos](https://github.com/wilfriedaugeard)
+
